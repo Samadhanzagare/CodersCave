@@ -1,74 +1,127 @@
+/* Reset some default styles */
+body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(120deg, #ff7aed, rgba(251, 255, 0, 0.815), hsla(83, 100%, 50%, 0.774));
-    background-size: 400% 400%;
-    animation: gradientBackground 15s ease infinite;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #5e55ff, #ff5722, #0eb7a1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container {
-    text-align: center;
-    color: #fff;
-}
-
-.quote-container {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the contents horizontally */
 }
 
 h1 {
-    color: #000;
-    font-size: 36px;
-    font-weight: bold; /* Set the font weight to bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  color: #000; /* Black text color */
 }
 
-#quote {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #000;
+.file-input {
+  margin-bottom: 20px;
 }
 
-#new-quote {
-    background-color: #fff;
-    color: #1e90ff;
-    border: none;
-    padding: 12px 30px;
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold; /* Set the font weight to bold */
-    transition: background-color 0.3s ease;
+.file-input input[type="file"] {
+  display: none;
 }
 
-#new-quote:hover {
-    background-color: #1e90ff;
-    color: #fff;
+.file-input label {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007BFF; /* Blue background */
+  color: #fff; /* White text color */
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-input label:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+#selectedFileName {
+  color: #888;
+  display: block;
+  margin-top: 10px;
+}
+
+.convert-btn {
+  display: inline-block;
+  width: auto;
+  padding: 12px 20px;
+  background-color: #007BFF; /* Blue background */
+  color: #fff; /* White text color */
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.convert-btn:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+.error-msg {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Center the container vertically */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide the success message by default */
+.hidden {
+  display: none;
+}
+
+/* Show the success message when the file is successfully converted */
+.show {
+  display: block;
+  color: green; /* color for the success message */
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Style for the big smiling emoji */
+.big-smiley {
+  font-size: 48px; 
 }
 
 footer {
-    margin-top: 30px;
-    font-size: 18px;
-    color: #000;
-    font-weight: bold; /* Set the font weight to bold */
-}
-
-@keyframes gradientBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  margin-top: 30px;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold; /* Set the font weight to bold */
 }

@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>QUOTE GENERATOR</h1>
-        <div class="quote-container">
-            <p id="quote"></p>
-            <button id="new-quote">New Quote</button>
-        </div>
-        <footer>
-            a web application by Samadhan
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+﻿<!doctype html>
+<html> 
+ <head> 
+  <title>Word to PDF Converter</title> 
+  <link rel="stylesheet" href="style.css"> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <h1>Word to PDF Converter</h1> 
+   <div class="file-input"> 
+    <input type="file" id="wordFile" accept=".docx"> <label for="wordFile">Choose File</label> <span id="selectedFileName"></span> 
+   </div> <button class="convert-btn" onclick="convertToPDF()">Convert to PDF</button> <span id="successMessage" class="hidden"><span class="big-smiley">😄</span> Your file has been converted! <span class="big-smiley">😄</span></span> 
+   <footer>
+     a web application by Samadhan 
+   </footer> 
+  </div> 
+  <script src="script.js"></script>  
+ </body>
 </html>
